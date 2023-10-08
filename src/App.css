@@ -1,38 +1,224 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+
+}
+.home{
   text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  background-image: url(../images/ho.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.contact{
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  background-image: url(../images/co.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.about{
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  background-image: url(../images/ab.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.error{
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  background-image: url(../images/error.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+h1{
+  text-align: center;
+}
+.detail{
+ width: 100%;
+ height: 10%;
+ margin: auto;
+ text-align: center;
+}
+.list.active {
+  color: palevioletred;
+  border-bottom: 1px solid palevioletred;
+  transition: 0.7s all;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.nav {
+  display: flex;
+  justify-content: right;
+  position: relative;
+  background-color: #34495e;
+
 }
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  margin: 20px;
+}
+.list{
+  color: white;
+}
+
+.nav ul .logo {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 800;
+  font-size: 35px;
+  letter-spacing: 20px;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 300px;
+  height: 350px;
+  background: #34495e;
+  padding: .5em;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card-image {
+  /* background-image: url(../images/cars.jpg); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+  border-radius: 6px 6px 0 0;
+  border-radius: 10px;
+
+}
+
+.card-image img{
+  width: 100%;
+  height: 100%;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: white;
+  padding: 10px 7px 0;
+  /* font-size: 13px; */
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: white;
+  padding: 7px;
+  position: relative;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.author {
+  color: white;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+.name {
+  font-weight: 600;
+  color:white;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+.btn{
+  padding: 13px;
+  font-size: 14px;
+  background-color: #232a30;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  width: 100%;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+  position: relative;
+  width: 85px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#232a30 50px, transparent 0),
+                    linear-gradient(#14788e 50px, transparent 0),
+                    linear-gradient(#232a30 50px, transparent 0),
+                    linear-gradient(#14788e 50px, transparent 0),
+                    linear-gradient(#232a30 50px, transparent 0),
+                    linear-gradient(#14788e 50px, transparent 0);
+  background-position: 0px center, 15px center, 30px center, 45px center, 60px center, 75px center, 90px center;
+  animation: rikSpikeRoll 0.65s linear infinite alternate;
+}
+@keyframes rikSpikeRoll {
+0% { background-size: 10px 3px;}
+16% { background-size: 10px 50px, 10px 3px, 10px 3px, 10px 3px, 10px 3px, 10px 3px}
+33% { background-size: 10px 30px, 10px 50px, 10px 3px, 10px 3px, 10px 3px, 10px 3px}
+50% { background-size: 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px, 10px 3px}
+66% { background-size: 10px 3px, 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px}
+83% { background-size: 10px 3px, 10px 3px,  10px 10px, 10px 30px, 10px 50px, 10px 3px}
+100% { background-size: 10px 3px, 10px 3px, 10px 3px,  10px 10px, 10px 30px, 10px 50px}
+}
+
+
