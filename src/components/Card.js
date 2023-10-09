@@ -3,22 +3,21 @@ import { NavLink } from "react-router-dom"
 
 
 function Card(props) {
-    const { images, tittle , price , model ,power , btn , btn1} = props
+    const { images, tittle , price , model ,descrip , btn , btn1} = props
 
      
     return (
         <div>           
            
             <div className="card">
-                <div className="card-image"> <img src={images} /> </div>
+                <div className="card-image1"> <img src={images} /> </div>
                 <div className="category">{tittle}</div>
-                <div className="heading"> {price}
-                    <div className="author"> Model Year <span class="name">{model}</span></div>
-                    <p>Horse Power {power}</p>
-                    <NavLink className="btn" to={btn}>{btn1}</NavLink>
-                   
-
+                <div className="heading"> Price: {price} 
+                    <div className="author"> CATEGORY: <span class="name1 ">{descrip}</span></div>
+                    <p> {}</p>              
                 </div>
+                <NavLink className="btn" to={btn}>{btn1}</NavLink>
+                
             </div>
 
         </div>

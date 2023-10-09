@@ -4,8 +4,8 @@ import Mainheader from "../Veiw/Mainheader"
 import Home from "../Veiw/Home"
 import About from "../Veiw/About"
 import Contact from "../Veiw/Contact"
-import Portfolio from "../Veiw/Portfolio"
-import PortfolioDetails from "../PortfolioDetails" 
+import Product from "../Veiw/Portfolio"
+import ProductDetails from "../Veiw/PortfolioDetails" 
 import Error from "../Veiw/Error"
 
 const router = createBrowserRouter([
@@ -26,12 +26,12 @@ const router = createBrowserRouter([
                 element: <Contact />,
             },
             {
-                path: "/portfolio",
-                element: <Portfolio />,
+                path: "/product",
+                element: <Product />,
             },
             {
-                path: "/portfolio/:id",
-                element: <PortfolioDetails />,
+                path: "/product/:id",
+                element: <ProductDetails />,
             },
             {
                 path: "*",

@@ -6,7 +6,7 @@ function Mainheader() {
             <div className="nav" >
 
                 <ul>
-                    <li className="logo" >Logo</li>  
+                    <li className="logo" >L<span>o</span>go</li>  
                     <li>
                         <NavLink to="/"  className="list" >Home</NavLink>
                     </li>
@@ -17,7 +17,7 @@ function Mainheader() {
                         <NavLink to={"/contact"} className="list">Contact</NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/portfolio"} className="list" >Portfolio</NavLink>
+                        <NavLink to={"/product"} className="list" >Product</NavLink>
                     </li>
 
                 </ul>
