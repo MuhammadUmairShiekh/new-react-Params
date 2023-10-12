@@ -21,6 +21,7 @@ function ProductDetails (){
         <div>
         < NavLink className="btnn" to={"/product"} >Go Back</NavLink>
         <h1 className="tag" >{prodc.category}</h1>
+        <h1 className="tag" >{prodc.count}</h1>
         <p>{prodc.count}</p>
          <Detail price={Math.round(prodc.price) + " $"}  images={prodc.image} tittle={prodc.title} 
             descrip={prodc.description}

@@ -7,14 +7,24 @@ import Contact from "../Veiw/Contact"
 import Product from "../Veiw/Portfolio"
 import ProductDetails from "../Veiw/PortfolioDetails" 
 import Error from "../Veiw/Error"
+import Login from "../Veiw/Login"
+import Sign from "../Veiw/Sign"
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Mainheader />,
+        element: <Mainheader  />,
         children: [
             {
                 path: "/",
+                element: <Login />,
+            },
+            {
+                path: "/sign",
+                element: <Sign />,
+            },
+            {
+                path: "/Home",
                 element: <Home />,
             },
             {

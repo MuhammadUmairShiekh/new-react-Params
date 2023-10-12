@@ -8,7 +8,7 @@ function Mainheader() {
                 <ul>
                     <li className="logo" >L<span>o</span>go</li>  
                     <li>
-                        <NavLink to="/"  className="list" >Home</NavLink>
+                        <NavLink to="/Home"  className="list" >Home</NavLink>
                     </li>
                     <li>
                         <NavLink to={"/about"} className="list" >About</NavLink>
