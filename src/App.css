@@ -333,16 +333,14 @@ h1{
 }
 
 form {
-  position: absolute;
-   top: 5rem;
-  left: 27rem;
+  
   display: flex;
   flex-direction: column;
   /* background: rgb(15, 23, 36); */
   background: #fff;
   padding: 1.5rem 1rem;
   width: 390px;
-  height: 450px;
+  height: auto;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   margin: auto;

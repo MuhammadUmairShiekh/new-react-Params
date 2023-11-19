@@ -20,6 +20,7 @@ function Product() {
     }
     return (
         <div className="main" >
+            
             {phos.map(item => {
                 return <>
                 <Card tittle={item.title} price={Math.round(item.price) + " $"} model={item.num_models} images={item.image}

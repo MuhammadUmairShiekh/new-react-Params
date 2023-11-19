@@ -11,18 +11,20 @@ import Login from "../Veiw/Login"
 import Sign from "../Veiw/Sign"
 
 const router = createBrowserRouter([
+
+    {
+        path:"/",
+        element:<Login />
+    },
+    {
+        path:"/sign",
+        element:<Sign />
+    },
     {
         path: "/",
         element: <Mainheader  />,
         children: [
-            {
-                path: "/",
-                element: <Login />,
-            },
-            {
-                path: "/sign",
-                element: <Sign />,
-            },
+          
             {
                 path: "/Home",
                 element: <Home />,
@@ -63,3 +65,62 @@ function Router() {
 }
 
 export default Router
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const router = createBrowserRouter([
+//     {
+//         path: "/",
+//         element: <Mainheader  />,
+//         children: [
+//             {
+//                 path: "/",
+//                 element: <Login />,
+//             },
+//             {
+//                 path: "/sign",
+//                 element: <Sign />,
+//             },
+//             {
+//                 path: "/Home",
+//                 element: <Home />,
+//             },
+//             {
+//                 path: "/about",
+//                 element: <About />,
+//             },
+//             {
+//                 path: "/contact",
+//                 element: <Contact />,
+//             },
+//             {
+//                 path: "/product",
+//                 element: <Product />,
+//             },
+//             {
+//                 path: "/product/:id",
+//                 element: <ProductDetails />,
+//             },
+//             {
+//                 path: "*",
+//                 element: <Error />,
+//             },
+            
+// ]    
+//     },
+    
+// ])

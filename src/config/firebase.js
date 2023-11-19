@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -14,16 +15,31 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
-function register(email, password) {
+function register(email, password, fname, lname) {
     createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
+        .then(async (userCredential) => {
             const user = userCredential.user;
-            alert("sucess fully signIn")
+            // console.log(userCredential)
+            try {
+                const docRef = await addDoc(collection(db, "user"), {
+                    fname: fname,
+                    lname: lname,
+                    email: email
+                });
+                alert("Sucess FUlly Risgister")
+                console.log("Document written with ID: ", docRef.id);
+            } 
+            catch (e) {
+                console.error("Error adding document: ", e);
+                alert(e.message)
+            }
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            //..
             alert(errorMessage)
         });
 
@@ -32,9 +48,12 @@ function register(email, password) {
 function logIN(email, password) {
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-           
+
             const user = userCredential.user;
-           alert("Sucess logIN")
+            //..
+            alert("Sucess logIN")
+
+
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -44,6 +63,6 @@ function logIN(email, password) {
 }
 
 export {
-    register
-    , logIN
+    register,
+    logIN
 }

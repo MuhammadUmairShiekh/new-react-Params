@@ -15,7 +15,7 @@ function ProductDetails (){
     if(!prodc){
         return <div className='loader' ></div>
       }
-     
+     console.log(prodc.category)
      
     return(
         <div>

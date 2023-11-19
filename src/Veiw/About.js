@@ -5,7 +5,7 @@ function About() {
    return( 
    <div className="about" >
         <p>This Is About Page</p>
-        <Sign />
+        
     </div>
     )
 }
